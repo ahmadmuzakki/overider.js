@@ -21,6 +21,8 @@
     "node-ini": "^1.0.0"
   },
   "devDependencies": {
-    "rewire": "^4.0.1"
+    "rewire": "^4.0.1",
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.3"
   }
 }
