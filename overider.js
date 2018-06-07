@@ -18,17 +18,16 @@ if(args.length==1){
   process.exit()
 }
 
-if(args.length!==2){
-  console.log("Wrong number of argument")
-  console.log(help)
-  process.exit()
+let output;
+if(args[2]==="-o"||args[2]==="--output" && args.length>3){
+  output = args[3]
 }
 
 let src=args[0],dst=args[1]
 let tipe = getType(src,dst)
 if( tipe=="ini"){
   console.log(`Overiding ini files: ${src} into ${dst}`)
-  ini.Overide(src,dst)
+  ini.Overide(src,dst,output)
   exit("exit")
 }
 

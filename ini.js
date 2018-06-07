@@ -1,10 +1,15 @@
 const fs = require('fs')
   , ini = require('ini')
-function Overide(source,destination){
+function Overide(source,destination,output){
   let parsedsource = ini.parse(fs.readFileSync(source, 'utf-8'))
   let parseddestination = ini.parse(fs.readFileSync(destination, 'utf-8'))
   let result = doOveride(parsedsource,parseddestination)
   
+  if(output){
+    destination = output
+  }
+  
+  console.log(`Output: ${destination}`)
   fs.writeFileSync(destination, ini.stringify(result))
 }
 
@@ -13,8 +18,8 @@ function doOveride(source, destination) {
     return source
   }
   
-  for(let field in source){
-    if(!destination.hasOwnProperty(field)){
+  for(let field in destination){
+    if(!source.hasOwnProperty(field)){
       continue
     }
     
