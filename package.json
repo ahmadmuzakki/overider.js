@@ -1,0 +1,26 @@
+{
+  "name": "overider",
+  "version": "1.0.0",
+  "description": "override structured files",
+  "main": "overider.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ahmadmuzakki/overider.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahmadmuzakki/overider.js/issues"
+  },
+  "homepage": "https://github.com/ahmadmuzakki/overider.js#readme",
+  "dependencies": {
+    "ini": "^1.3.5",
+    "node-ini": "^1.0.0"
+  },
+  "devDependencies": {
+    "rewire": "^4.0.1"
+  }
+}
